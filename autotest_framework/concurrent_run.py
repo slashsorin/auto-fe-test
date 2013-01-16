@@ -4,7 +4,7 @@ import time
 import os
 import string
     
-os.chdir('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/tests_free_account/')
+os.chdir(path)
 start = time.time()
 
 tests = glob.glob('Test*.py')
