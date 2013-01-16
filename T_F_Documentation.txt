@@ -1,1 +1,0 @@
-Test Suite (many Test Scripts) -> Test Framework (Python Unittests, Parallelism, Cross-Platform) -> Sauce Cloud -> Report Dashboard
