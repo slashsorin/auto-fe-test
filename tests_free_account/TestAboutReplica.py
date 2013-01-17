@@ -20,7 +20,7 @@ class TestAbout(unittest.TestCase):
         self.failUnless(sel.is_element_present("xpath=//div[@id='index']/div[1]/h1"))
         self.failUnless(sel.is_element_present("xpath=//div[@id='index']/div[2]/div[2]/img"))
         self.failUnless(sel.is_element_present("xpath=//a[@id='popinMobile']/img"))
-        sel.click("xpath=//a[@id='popinMobile']/img")
+        sel.click("xpath=//a[@id='popinMobile']/abcdef")
     
     def tearDown(self):
         self.selenium.stop()
