@@ -1,5 +1,4 @@
 import sys, time, os, signal
-from twisted.words.protocols.jabber.xmlstream import TimeoutError
 from selenium.common.exceptions import TimeoutException
 
 #sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
