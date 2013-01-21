@@ -1,9 +1,13 @@
 import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
 import cfg
+
+import unittest, xmlrunner
 
 class TestUserAccount(SeleniumTestCase.SeleniumTestCase):
         
@@ -14,7 +18,7 @@ class TestUserAccount(SeleniumTestCase.SeleniumTestCase):
             sel.open("/login?onLogin=http%3A%2F%2F" + cfg.config['base-url'] + "%2Fuser%2Faccount")
             sel.wait_for_page_to_load("60000")
             sel.type("id=username", "sorintest")
-            sel.type("id=password", "nbasketball")
+            sel.type("id=password", "sorintest")
             sel.click("xpath=//span[@class='system-blue-shade-fat-btn-text']//strong[.='Log in']")
             sel.wait_for_page_to_load("60000")
             self.assertEqual("Issuu - Account Center", sel.get_title())
@@ -50,3 +54,6 @@ class TestUserAccount(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
                 
 globals().update(make_platform_classes.make_platform_classes(TestUserAccount))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

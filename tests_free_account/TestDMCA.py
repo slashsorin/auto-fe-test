@@ -1,8 +1,14 @@
-import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+import sys, time, os, signal
+from twisted.words.protocols.jabber.xmlstream import TimeoutError
+from selenium.common.exceptions import TimeoutException
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
+
+import unittest, xmlrunner
 
 class TestDMCA(SeleniumTestCase.SeleniumTestCase):
   
@@ -41,7 +47,6 @@ class TestDMCA(SeleniumTestCase.SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             sel.go_back()
             sel.wait_for_page_to_load("60000")
-            sel.set_speed("500")
             sel.click("link=Blog")
             sel.wait_for_page_to_load("60000")
             sel.go_back()
@@ -85,7 +90,7 @@ class TestDMCA(SeleniumTestCase.SeleniumTestCase):
             sel.type("id=password", "autotest")
             sel.click("xpath=//span[@class='system-blue-shade-fat-btn-text']//strong[.='Log in']")
             sel.wait_for_page_to_load("60000")
-            sel.set_speed("500")
+            #sel.set_speed("500")
             self.assertEqual("Issuu - DMCA", sel.get_title())
             sel.click("link=About us")
             sel.wait_for_page_to_load("60000")
@@ -115,7 +120,7 @@ class TestDMCA(SeleniumTestCase.SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             sel.go_back()
             sel.wait_for_page_to_load("60000")
-            sel.set_speed("500")
+            #sel.set_speed("500")
             sel.click("link=Blog")
             sel.wait_for_page_to_load("60000")
             sel.go_back()
@@ -153,9 +158,15 @@ class TestDMCA(SeleniumTestCase.SeleniumTestCase):
             
         except AttributeError:
             pass
+        except TimeoutException:
+            #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
+            print self.__class__.__name__ + " TIMEDOUT !!!"
         except: # catch *all* exceptions
             if  sys.exc_info()[1]:
                 sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
                 print self.__class__.__name__ + " failed!"
             
 globals().update(make_platform_classes.make_platform_classes(TestDMCA))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

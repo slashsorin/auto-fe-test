@@ -1,8 +1,12 @@
 import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
+
+import unittest, xmlrunner
 
 class TestCopyright(SeleniumTestCase.SeleniumTestCase):
     
@@ -112,7 +116,7 @@ class TestCopyright(SeleniumTestCase.SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             self.assertEqual("Issuu Pro", sel.get_title())
             sel.go_back()
-            sel.wait_for_page_to_load("60000")
+            self.failUnless(sel.is_element_present("xpath=//div[@id='footerText']/div[1]/p"))
             self.assertEqual("Issuu - People", sel.get_title())
             sel.click("link=Terms of Services")
             sel.wait_for_page_to_load("60000")
@@ -179,3 +183,6 @@ class TestCopyright(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
     
 globals().update(make_platform_classes.make_platform_classes(TestCopyright))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

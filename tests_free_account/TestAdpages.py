@@ -1,8 +1,13 @@
-import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+import sys
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
+
+import unittest
+import xmlrunner
 
 class TestAdpages(SeleniumTestCase.SeleniumTestCase):
 
@@ -28,7 +33,7 @@ class TestAdpages(SeleniumTestCase.SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             sel.wait_for_page_to_load("60000")
             sel.type("id=username", "sorintest")
-            sel.type("id=password", "nbasketball")
+            sel.type("id=password", "sorintest")
             sel.click("xpath=//form[@id='myForm']/div[2]/a/span[2]")
             sel.wait_for_page_to_load("60000")
             self.assertEqual("ISSUU - Advertise on Issuu", sel.get_title())
@@ -46,3 +51,6 @@ class TestAdpages(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
     
 globals().update(make_platform_classes.make_platform_classes(TestAdpages))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
