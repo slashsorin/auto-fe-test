@@ -21,7 +21,7 @@ def test_fun(path):
     os.chdir('..')
     
 
-for p in ['tests_pro_account','tests_free_account', 'tests_insight']:
+for p in ['tests_pro_account','tests_free_account']:
     test_fun(p)
 
 '''    
