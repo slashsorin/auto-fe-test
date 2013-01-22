@@ -8,7 +8,7 @@ def test_fun(path):
     os.chdir(path)
     start = time.time()
 
-    tests = glob.glob('Test*.py')
+    tests = glob.glob('Testbb*.py')
 
     processes = []
 
