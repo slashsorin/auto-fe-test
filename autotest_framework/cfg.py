@@ -5,10 +5,17 @@
 
     Copyright Issuu Aps Jun 15, 2012
 '''
+
 import SauceParams
 import os
 
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
 tp = SauceParams.GetParams()
+
 
 config={
         'username' : os.environ.get('SAUCE_USER_NAME'),
@@ -16,6 +23,13 @@ config={
         'host' : os.environ.get('SELENIUM_HOST'),
         'port' : os.environ.get('SELENIUM_PORT'),
         'base-url' : os.environ.get('SELENIUM_STARTING_URL', 'issuu.com'),
+
+        'session_timeout' : int(os.getenv('SELENIUM_SESSION_TIMEOUT', '90000')),
+        'video-upload-on-pass': False,
+        #need to check that the idle-timeout works !!!
+        'idle-timeout' : 300, # seconds, default is 90
+        'max-duration' : 1800, # seconds, default is 1800 ~ 30 min.
+        'command-timeout' : 300, # seconds, default is 300
 
         'platforms' :   [{
                          "os": os.environ.get('SELENIUM_PLATFORM'),
