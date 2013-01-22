@@ -38,3 +38,13 @@ config={
                          }
                          ]
         }
+
+# merge configuration using env var.
+try:
+	f = open(os.getenv('AUTOTEST_CONFIG'))
+	c = json.load(f)
+	for k in c:
+		config[k] = c[k]
+except Exception, err:
+	print 'Failed to parse and merge json config file: ', err
+	pass
