@@ -8,14 +8,14 @@ def test_fun(path):
     os.chdir(path)
     start = time.time()
 
-    tests = glob.glob('Testaa*.py')
+    tests = glob.glob('Test*.py')
 
     processes = []
 
     for test in tests:
-		processes.append(Popen('python %s' % test, shell=True))
-        #x = string.rstrip(test, '.py')
-        #processes.append(Popen('python -m unittest %s' % x, shell=True))
+		#processes.append(Popen('python %s' % test, shell=True))
+        x = string.rstrip(test, '.py')
+        processes.append(Popen('python -m unittest %s' % x, shell=True))
     
     for process in processes:
         process.wait()
