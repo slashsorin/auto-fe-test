@@ -16,7 +16,6 @@ class TestAbout(unittest.TestCase):
                                  "\",\"access-key\":\"" + os.environ.get('SAUCE_API_KEY') +
                                  "\",\"browser\": \"" + os.environ.get('SELENIUM_BROWSER') +
                                  "\",\"browser-version\":\"" + os.environ.get('SELENIUM_VERSION') +
-                                 "\",\"job-name\":\"" + __class__.__name__ +
                                  "\",\"os\":\"" + os.environ.get('SELENIUM_PLATFORM') + "\"}", 
                                  "http://issuu.com/")
         self.selenium.start()
