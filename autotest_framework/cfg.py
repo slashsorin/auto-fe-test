@@ -14,7 +14,7 @@ config={
         'username' : os.environ.get('SAUCE_USER_NAME'),
         'access-key' : os.environ.get('SAUCE_API_KEY'), 
         'host' : os.environ.get('SELENIUM_HOST'),
-        'port' : os.environ.get('SELENIUM_PORT'),
+        'port' : 80, #os.environ.get('SELENIUM_PORT'),
         'base-url' : os.environ.get('SELENIUM_STARTING_URL'),
 
         'platforms' :   [{
