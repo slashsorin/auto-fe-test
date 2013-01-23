@@ -1,9 +1,14 @@
 import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
+
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
 import cfg
+
+import unittest, xmlrunner
 
 class TestUserPage(SeleniumTestCase.SeleniumTestCase):
         
@@ -38,12 +43,6 @@ class TestUserPage(SeleniumTestCase.SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             sel.go_back()
             sel.wait_for_page_to_load("60000")
-            #sel.click("xpath=//div[@id='user-statistics']//li[.='Member since Jun 21, 2012']")
-            sel.click("id=created-date")
-            sel.click("link=Subscribers 0")
-            sel.wait_for_page_to_load("60000")
-            sel.go_back()
-            sel.wait_for_page_to_load("60000")
             sel.click("link=Login")
             sel.wait_for_page_to_load("60000")
             sel.type("id=username", "proaccount")
@@ -72,3 +71,6 @@ class TestUserPage(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
 
 globals().update(make_platform_classes.make_platform_classes(TestUserPage))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

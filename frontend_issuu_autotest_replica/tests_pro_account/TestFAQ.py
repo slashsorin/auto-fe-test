@@ -1,8 +1,13 @@
 import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
+
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
+
+import unittest, xmlrunner
 
 class TestFAQ(SeleniumTestCase.SeleniumTestCase):
 
@@ -25,10 +30,6 @@ class TestFAQ(SeleniumTestCase.SeleniumTestCase):
             sel.go_back()
             sel.wait_for_page_to_load("60000")
             sel.click("xpath=//ul[@class='horizontal-listBiz']//strong[.='Pricing']")
-            sel.wait_for_page_to_load("60000")
-            sel.go_back()
-            sel.wait_for_page_to_load("60000")
-            sel.click("xpath=//ul[@class='horizontal-listBiz']//strong[.='How to']")
             sel.wait_for_page_to_load("60000")
             sel.go_back()
             sel.wait_for_page_to_load("60000")
@@ -69,10 +70,6 @@ class TestFAQ(SeleniumTestCase.SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             sel.go_back()
             sel.wait_for_page_to_load("60000")
-            sel.click("xpath=//ul[@class='horizontal-listBiz']//strong[.='How to']")
-            sel.wait_for_page_to_load("60000")
-            sel.go_back()
-            sel.wait_for_page_to_load("60000")
             sel.click("xpath=//ul[@class='horizontal-listBiz']//strong[.='Cases']")
             sel.wait_for_page_to_load("60000")
             sel.go_back()
@@ -97,3 +94,6 @@ class TestFAQ(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
     
 globals().update(make_platform_classes.make_platform_classes(TestFAQ))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

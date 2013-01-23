@@ -1,8 +1,13 @@
 import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
+
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
+
+import unittest, xmlrunner
 
 class TestFlagMail(SeleniumTestCase.SeleniumTestCase):
     
@@ -31,3 +36,6 @@ class TestFlagMail(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
 
 globals().update(make_platform_classes.make_platform_classes(TestFlagMail))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

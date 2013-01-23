@@ -1,8 +1,13 @@
 import sys, time, os
-sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+
+#sys.path.append('/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/')
+sys.path.append('../autotest_framework')
+
 
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
+
+import unittest, xmlrunner
 
 class TestDMCA(SeleniumTestCase.SeleniumTestCase):
   
@@ -81,7 +86,7 @@ class TestDMCA(SeleniumTestCase.SeleniumTestCase):
             self.failUnless(sel.is_element_present("xpath=//div[@id='footerText']/div[1]/p"))
             sel.click("link=Login")
             sel.wait_for_page_to_load("60000")
-            sel.type("id=username", "PROaccount")
+            sel.type("id=username", "proaccount")
             sel.type("id=password", "autotest")
             sel.click("xpath=//span[@class='system-blue-shade-fat-btn-text']//strong[.='Log in']")
             sel.wait_for_page_to_load("60000")
@@ -159,3 +164,6 @@ class TestDMCA(SeleniumTestCase.SeleniumTestCase):
                 print self.__class__.__name__ + " failed!"
             
 globals().update(make_platform_classes.make_platform_classes(TestDMCA))
+
+if __name__ == '__main__':
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
