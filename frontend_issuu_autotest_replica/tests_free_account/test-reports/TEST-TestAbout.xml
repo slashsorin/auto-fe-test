@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<testsuite errors="0" failures="0" name="TestAbout" tests="1" time="67.436">
-	<testcase classname="TestAbout" name="test_about" time="67.436"/>
-	<system-out>
-<![CDATA[TestAbout_Windows_2012_firefox_18_ passed!
-]]>	</system-out>
-	<system-err>
-<![CDATA[]]>	</system-err>
-</testsuite>
