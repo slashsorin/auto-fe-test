@@ -7,6 +7,8 @@ sys.path.append('../autotest_framework')
 import SeleniumTestCase, make_platform_classes
 import SetTestStatus as sts
 
+import unittest, xmlrunner
+
 class TestBookmarksReceivedPRO(SeleniumTestCase.SeleniumTestCase):
         
     def test_bookmarks_received(self):
