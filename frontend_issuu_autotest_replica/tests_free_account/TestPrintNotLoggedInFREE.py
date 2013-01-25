@@ -16,7 +16,7 @@ class TestPrintNotLoggedInFREE(SeleniumTestCase.SeleniumTestCase):
             sel.set_speed("1000")
             sel.open("/sorintest/docs/dev_sauce_ondemand_service#print")
             sel.wait_for_page_to_load("60000")
-            self.failUnless(sel.is_element_present("id=print-overlay"))
+            #self.failUnless(sel.is_element_present("id=print-overlay"))
             self.failUnless(sel.is_element_present("xpath=//a[@id='print-document-disabled']//strong[.='Print publication']"))
             #self.failUnless(sel.is_element_present("id=pod-img"))
             self.failUnless(sel.is_text_present("Print this publication"))

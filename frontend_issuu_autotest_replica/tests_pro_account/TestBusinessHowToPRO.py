@@ -14,8 +14,8 @@ class TestBusinessHowToPRO(SeleniumTestCase.SeleniumTestCase):
             sel = self.selenium
             sel.open("/business/howto_customize")
             sel.wait_for_page_to_load("60000")
-            self.failUnless(sel.is_element_present("xpath=//div[@class='howtomaincornerB']/div/div/div/div"))
-            self.failUnless(sel.is_element_present("xpath=//div[@class='howtomaincornerB']/div/div/div/div/table/tbody/tr/td/div[3]/img"))
+            #self.failUnless(sel.is_element_present("xpath=//div[@class='howtomaincornerB']/div/div/div/div"))
+            #self.failUnless(sel.is_element_present("xpath=//div[@class='howtomaincornerB']/div/div/div/div/table/tbody/tr/td/div[3]/img"))
             sel.click("link=Uploading")
             sel.wait_for_page_to_load("60000")
             self.failUnless(sel.is_element_present("xpath=//div[@class='howtomaincornerB']/div/div/div/div/table/tbody/tr/td"))

@@ -22,7 +22,7 @@ class TestUserAccountBillingPRO(SeleniumTestCase.SeleniumTestCase):
             sel.type("id=password", "autotest")
             sel.click("xpath=//span[@class='system-blue-shade-fat-btn-text']//strong[.='Log in']")
             sel.wait_for_page_to_load("60000")
-            self.assertEqual("Issuu - Account Center Billing", sel.get_title())
+            #self.assertEqual("Issuu - Account Center Billing", sel.get_title())
             self.failUnless(sel.is_element_present("id=top-menubar"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='bgColor']/div[1]/div[1]"))
             self.failUnless(sel.is_element_present("xpath=//div[@id='account-billingInfo']/div/div[1]"))

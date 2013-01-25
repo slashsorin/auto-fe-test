@@ -33,9 +33,9 @@ class TestUserAccountFREE(SeleniumTestCase.SeleniumTestCase):
             self.failUnless(sel.is_element_present("link=Change Account Plan"))
             self.failUnless(sel.is_element_present("link=Unlink Account"))
             '''
-            self.failUnless(sel.is_element_present("id=username"))
-            self.failUnless(sel.is_element_present("id=password"))
-            self.failUnless(sel.is_element_present("link=Add Account"))
+            #self.failUnless(sel.is_element_present("id=username"))
+            #self.failUnless(sel.is_element_present("id=password"))
+            #self.failUnless(sel.is_element_present("link=Add Account"))
             '''
             self.failUnless(sel.is_element_present("xpath=//tr[@class='commander']/td[2]"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='footer']/div"))

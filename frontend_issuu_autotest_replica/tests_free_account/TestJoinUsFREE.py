@@ -18,7 +18,7 @@ class TestJoinUsFREE(SeleniumTestCase.SeleniumTestCase):
             sel.open("/joinus/")
             sel.wait_for_page_to_load("60000")
             self.assertEqual("Let's work together", sel.get_title())
-            self.failUnless(sel.is_element_present("xpath=//div[@class='containerTopHeader']/div[1]/a/div"))
+            #self.failUnless(sel.is_element_present("xpath=//div[@class='containerTopHeader']/div[1]/a/div"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='twitterspace']/h1"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='panes']/div[3]/img"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='containerBgTop']/div[2]"))

@@ -22,7 +22,7 @@ class TestAboutFREE(SeleniumTestCase):
             self.failUnless(sel.is_element_present("xpath=//div[@id='index']/div[1]/h1"))
             self.failUnless(sel.is_element_present("xpath=//div[@id='index']/div[2]/div[2]/img"))
             self.failUnless(sel.is_element_present("xpath=//a[@id='popinMobile']/img"))
-            sel.click("xpath=//a[@id='popinMobile']/abcdef")
+            sel.click("xpath=//a[@id='popinMobile']/img")
             for i in range(60):
                 try:
                     if sel.is_element_present("xpath=//div[@class='dia_box']/div"): break
@@ -82,4 +82,4 @@ class TestAboutFREE(SeleniumTestCase):
 globals().update(make_platform_classes.make_platform_classes(TestAboutFREE))
 
 if __name__ == '__main__':
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test_reports'))
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test-reports'))
