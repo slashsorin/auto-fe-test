@@ -82,4 +82,4 @@ class TestAboutFREE(SeleniumTestCase):
 globals().update(make_platform_classes.make_platform_classes(TestAboutFREE))
 
 if __name__ == '__main__':
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test_reports'))
