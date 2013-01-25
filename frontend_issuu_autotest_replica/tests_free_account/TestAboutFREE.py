@@ -22,7 +22,7 @@ class TestAboutFREE(SeleniumTestCase):
             self.failUnless(sel.is_element_present("xpath=//div[@id='index']/div[1]/h1"))
             self.failUnless(sel.is_element_present("xpath=//div[@id='index']/div[2]/div[2]/img"))
             self.failUnless(sel.is_element_present("xpath=//a[@id='popinMobile']/img"))
-            sel.click("xpath=//a[@id='popinMobile']/img")
+            sel.click("xpath=//a[@id='popinMobile']/abcdef")
             for i in range(60):
                 try:
                     if sel.is_element_present("xpath=//div[@class='dia_box']/div"): break
@@ -68,17 +68,18 @@ class TestAboutFREE(SeleniumTestCase):
             self.failUnless(sel.is_element_present("xpath=//div[@id='footerText']/div[1]/p"))
             sel.click("link=Logout")
             sel.wait_for_page_to_load("60000")
-            print self.__class__.__name__ + " passed!"       
-            sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
+			
+            #print self.__class__.__name__ + " passed!"       
+            #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
             
         except AttributeError:
             pass
-        except: # catch *all* exceptions
-            if  sys.exc_info()[1]:
-                sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
-                print self.__class__.__name__ + " failed!"
+        #except: # catch *all* exceptions
+            #if  sys.exc_info()[1]:
+                #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
+                #print self.__class__.__name__ + " failed!"
     
 globals().update(make_platform_classes.make_platform_classes(TestAboutFREE))
 
 if __name__ == '__main__':
-    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test_reports'))
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))

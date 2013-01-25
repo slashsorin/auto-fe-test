@@ -25,15 +25,15 @@ class TestJoinUsFREE(SeleniumTestCase.SeleniumTestCase):
             self.failUnless(sel.is_element_present("xpath=//div[@id='footer']/div[1]"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='containerFooter']/p"))
         
-            print self.__class__.__name__ + " passed!"
-            sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True) 
+            #print self.__class__.__name__ + " passed!"
+            #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True) 
         
         except AttributeError:
             pass
-        except: # catch *all* exceptions
-            if  sys.exc_info()[1]:
-                sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
-                print self.__class__.__name__ + " failed!"
+        #except: # catch *all* exceptions
+            #if  sys.exc_info()[1]:
+                #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
+                #print self.__class__.__name__ + " failed!"
             
 globals().update(make_platform_classes.make_platform_classes(TestJoinUsFREE))
 

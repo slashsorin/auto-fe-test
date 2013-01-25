@@ -153,15 +153,15 @@ class TestDMCAPRO(SeleniumTestCase.SeleniumTestCase):
             self.failUnless(sel.is_text_present("DMCA Notification Guidelines"))
             self.failUnless(sel.is_element_present("xpath=//div[@class='page-wrapper']/div[2]/div[3]"))
             
-            print self.__class__.__name__ + " passed!"
-            sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True) 
+            #print self.__class__.__name__ + " passed!"
+            #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True) 
         
         except AttributeError:
             pass
-        except: # catch *all* exceptions
-            if  sys.exc_info()[1]:
-                sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
-                print self.__class__.__name__ + " failed!"
+        #except: # catch *all* exceptions
+            #if  sys.exc_info()[1]:
+                #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
+                #print self.__class__.__name__ + " failed!"
             
 globals().update(make_platform_classes.make_platform_classes(TestDMCAPRO))
 
