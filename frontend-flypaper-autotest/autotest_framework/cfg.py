@@ -29,7 +29,7 @@ config={
         'access-key' : "23a5b32a-6ab8-4866-8f1d-9a13c98348c2",
         'host' : "ondemand.saucelabs.com",
         'port' : 4444,
-        'base-url' : "flypaper.issuu.com",
+        'base-url' : "issuu.com",
         'platforms' :   [{
                          "os": "Mac 10.6",
                          "browser": "firefox",
