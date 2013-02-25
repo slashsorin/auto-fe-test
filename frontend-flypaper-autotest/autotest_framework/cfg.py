@@ -31,8 +31,8 @@ config={
         'port' : 4444,
         'base-url' : "flypaper.issuu.com",
         'platforms' :   [{
-                         "os": "Windows 2008",
+                         "os": "Mac 10.6",
                          "browser": "firefox",
-                         "browser-version": "11"
+                         "browser-version": "19"
                          }]
         }
