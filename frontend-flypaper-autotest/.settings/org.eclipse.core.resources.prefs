@@ -1,0 +1,20 @@
+#Mon Feb 25 14:19:19 CET 2013
+eclipse.preferences.version=1
+encoding//autotest_framework/Constants.py=utf-8
+encoding//autotest_framework/IssuuUtils.py=utf-8
+encoding//autotest_framework/MyUtilities.py=utf-8
+encoding//autotest_framework/NumberstTest.py=utf-8
+encoding//autotest_framework/SauceParams.py=utf-8
+encoding//autotest_framework/SeleniumTestCase.py=utf-8
+encoding//autotest_framework/SetTestStatus.py=utf-8
+encoding//autotest_framework/TestFrameworkMain.py=utf-8
+encoding//autotest_framework/TestJSErrors.py=utf-8
+encoding//autotest_framework/cfg.py=utf-8
+encoding//autotest_framework/make_platform_classes.py=utf-8
+encoding//autotest_framework/ordered_run.py=utf-8
+encoding//autotest_framework/test_local.py=utf-8
+encoding//iOS_tests/TestSauceIpad.py=utf-8
+encoding//iOS_tests/testHTML5.py=utf-8
+encoding//tests_flypaper/__init__.py=utf-8
+encoding//tests_free_account/__init__.py=utf-8
+encoding//tests_insight/__init__.py=utf-8

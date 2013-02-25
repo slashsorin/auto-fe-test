@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<testsuite errors="1" failures="0" name="TestAbout" tests="1" time="24.169">
+	<testcase classname="TestAbout" name="test_about" time="24.169">
+		<error message="'TestAbout' object has no attribute 'selenium'" type="AttributeError">
+<![CDATA[Traceback (most recent call last):
+  File "TestAbout.py", line 18, in test_about
+    sel = self.selenium
+AttributeError: 'TestAbout' object has no attribute 'selenium'
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

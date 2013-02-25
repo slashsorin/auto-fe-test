@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="1" name="TheTest" tests="3" time="0.000">
+	<testcase classname="TheTest" name="testOne" time="0.000"/>
+	<testcase classname="TheTest" name="testTwo" time="0.000"/>
+	<testcase classname="TheTest" name="testThree" time="0.000">
+		<failure message="3 != 4" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/Users/Sorin/Issuu/new_eclipse_ws/frontend-issuu-autotest/autotest_framework/NumberstTest.py", line 18, in testThree
+    self.assertEquals(3, 4)
+AssertionError: 3 != 4
+]]>		</failure>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

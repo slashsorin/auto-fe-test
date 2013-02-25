@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="make_platform_classes.TestAutosVehicles_Windows_2012_firefox_18_" tests="1" time="103.711">
+	<testcase classname="make_platform_classes.TestAutosVehicles_Windows_2012_firefox_18_" name="test_autos_vehicles" time="103.711"/>
+	<system-out>
+<![CDATA[TestAutosVehicles_Windows_2012_firefox_18_ passed!
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
