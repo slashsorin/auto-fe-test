@@ -21,7 +21,7 @@ config={
         'access-key' : "23a5b32a-6ab8-4866-8f1d-9a13c98348c2",
         'host' : "ondemand.saucelabs.com",
         'port' : 4444,
-        'base-url' : os.getenv('SELENIUM_DOMAIN', 'issuu.com'),
+        'base-url' : os.getenv('SELENIUM_DOMAIN', 'flypaper.issuu.com'),
         'session_timeout' : int(os.getenv('SELENIUM_SESSION_TIMEOUT', '90000')),
         'video-upload-on-pass': False,
         #need to check that the idle-timeout works !!!
