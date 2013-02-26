@@ -26,9 +26,8 @@ class TestExplore(SeleniumTestCase):
             #self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/div/p[2]"))
             #self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/div"))
             #self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/a/img"))
-            
 			print self.__class__.__name__ + " passed!"       
-            sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
+			sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
             
         except AttributeError:
             pass
