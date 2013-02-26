@@ -21,7 +21,7 @@ def test_fun(path):
     os.chdir('..')
 
 	for process in processes:
-	    process.wait()
+		process.wait()
     
 
 for p in ['tests_flypaper']:
