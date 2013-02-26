@@ -31,10 +31,10 @@ class TestAutosVehicles(SeleniumTestCase):
             
         except AttributeError:
             pass
-        except: # catch *all* exceptions
-            if  sys.exc_info()[1]:
-                print self.__class__.__name__ + " failed!"
-                sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
+        #except: # catch *all* exceptions
+            #if  sys.exc_info()[1]:
+                #print self.__class__.__name__ + " failed!"
+                #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
         
 globals().update(make_platform_classes.make_platform_classes(TestAutosVehicles))
 
