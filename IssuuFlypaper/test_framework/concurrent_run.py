@@ -4,7 +4,6 @@ import time
 import os
 
 def test_fun(path):
-    os.chdir('..')
     os.chdir(path)
     start = time.time()
     tests = glob.glob('Test*.py')
