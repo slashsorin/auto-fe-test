@@ -1,0 +1,10 @@
+#Tue Feb 26 11:11:28 CET 2013
+eclipse.preferences.version=1
+encoding//external_libraries/__init__.py=utf-8
+encoding//flypaper_tests/__init__.py=utf-8
+encoding//test_framework/SeleniumTestCase.py=utf-8
+encoding//test_framework/SetTestStatus.py=utf-8
+encoding//test_framework/__init__.py=utf-8
+encoding//test_framework/cfg.py=utf-8
+encoding//test_framework/make_platform_classes.py=utf-8
+encoding//test_reports/__init__.py=utf-8
