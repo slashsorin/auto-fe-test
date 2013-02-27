@@ -30,20 +30,20 @@ config={
         'command-timeout' : 300,     # seconds, default is 300
 
         'platforms' :  [#{"os": "Windows 2003", "browser": "iexplore", "browser-version": "8", "avoid-proxy": True},
-						{"os": "Windows 2008", "browser": "iexplore", "browser-version": "8", "avoid-proxy": True},
-						{"os": "Windows 2008", "browser": "iexplore", "browser-version": "9", "avoid-proxy": True},
+						{"os": "Windows 2008", "browser": "iexplore", "browser-version": "8"},
+						{"os": "Windows 2008", "browser": "iexplore", "browser-version": "9"},
 						#{"os": "Windows 2003", "browser": "firefox", "browser-version": "11", "avoid-proxy": True},
-						{"os": "Windows 2008", "browser": "firefox", "browser-version": "11", "avoid-proxy": True},
-						{"os": "Windows 2012", "browser": "firefox", "browser-version": "11", "avoid-proxy": True},
+						{"os": "Windows 2008", "browser": "firefox", "browser-version": "11"},
+						{"os": "Windows 2012", "browser": "firefox", "browser-version": "11"},
 						#{"os": "Windows 2003", "browser": "safari", "browser-version": "5", "avoid-proxy": True},
-						{"os": "Windows 2008", "browser": "safari", "browser-version": "5", "avoid-proxy": True},
+						{"os": "Windows 2008", "browser": "safari", "browser-version": "5"},
 						#{"os": "Windows 2003", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
-						{"os": "Windows 2008", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
-						{"os": "Mac 10.8", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
+						{"os": "Windows 2008", "browser": "googlechrome", "browser-version": ""},
+						{"os": "Mac 10.8", "browser": "googlechrome", "browser-version": ""},
 						#{"os": "Mac 10.6", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
 						#{"os": "Mac 10.6", "browser": "firefox", "browser-version": "11", "avoid-proxy": True},
 						#{"os": "Mac 10.6", "browser": "safari", "browser-version": "5", "avoid-proxy": True},
-						{"os": "Mac 10.8", "browser": "safari", "browser-version": "6", "avoid-proxy": True}
+						{"os": "Mac 10.8", "browser": "safari", "browser-version": "6"}
 						#{"os": "Linux", "browser": "firefox", "browser-version": "11", "avoid-proxy": True}
                         ]
         }
