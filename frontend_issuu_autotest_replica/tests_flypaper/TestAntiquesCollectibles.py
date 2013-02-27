@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestAntiquesCollectibles(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_antiques_collectibles(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestReligionSelfhelp(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_religion_selfhelp(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestHealth(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_health(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

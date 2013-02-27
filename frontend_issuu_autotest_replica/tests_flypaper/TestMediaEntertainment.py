@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestMediaEntertainment(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_media_entertainment(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

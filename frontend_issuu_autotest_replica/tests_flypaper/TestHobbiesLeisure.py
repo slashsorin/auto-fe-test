@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestHobbiesLeisure(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_hobbies_leisure(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestScienceNature(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_science_nature(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

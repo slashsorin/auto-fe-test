@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestPopular(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_popular(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

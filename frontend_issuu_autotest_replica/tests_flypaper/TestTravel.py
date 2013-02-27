@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestTravel(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_travel(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

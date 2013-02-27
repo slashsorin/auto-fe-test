@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestStyleBeauty(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_style_beauty(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

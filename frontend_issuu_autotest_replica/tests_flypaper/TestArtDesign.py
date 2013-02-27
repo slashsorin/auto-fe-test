@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestArtDesign(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_art_design(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")

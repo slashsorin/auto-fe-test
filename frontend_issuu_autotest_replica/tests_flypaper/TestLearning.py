@@ -14,7 +14,7 @@ import unittest, xmlrunner
 class TestLearning(SeleniumTestCase):
    
     
-    def test_explore(self):
+    def test_learning(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")
