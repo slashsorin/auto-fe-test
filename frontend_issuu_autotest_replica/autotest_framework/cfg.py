@@ -43,7 +43,7 @@ config={
 						#{"os": "Mac 10.6", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
 						#{"os": "Mac 10.6", "browser": "firefox", "browser-version": "11", "avoid-proxy": True},
 						#{"os": "Mac 10.6", "browser": "safari", "browser-version": "5", "avoid-proxy": True},
-						#{"os": "Mac 10.8", "browser": "safari", "browser-version": "6."}
+						{"os": "Mac 10.8", "browser": "safari", "browser-version": "6."}
 						#{"os": "Linux", "browser": "firefox", "browser-version": "11", "avoid-proxy": True}
                         ]
         }
