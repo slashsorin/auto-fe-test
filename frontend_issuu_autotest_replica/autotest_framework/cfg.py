@@ -39,7 +39,7 @@ config={
 						{"os": "Windows 2008", "browser": "safari", "browser-version": "5"},
 						#{"os": "Windows 2003", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
 						{"os": "Windows 2008", "browser": "googlechrome", "browser-version": ""},
-						{"os": "Mac 10.8", "browser": "googlechrome", "browser-version": ""},
+						#{"os": "Mac 10.8", "browser": "googlechrome", "browser-version": ""},
 						#{"os": "Mac 10.6", "browser": "googlechrome", "browser-version": "", "avoid-proxy": True},
 						#{"os": "Mac 10.6", "browser": "firefox", "browser-version": "11", "avoid-proxy": True},
 						#{"os": "Mac 10.6", "browser": "safari", "browser-version": "5", "avoid-proxy": True},
