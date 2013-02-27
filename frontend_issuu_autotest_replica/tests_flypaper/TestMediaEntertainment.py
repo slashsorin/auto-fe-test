@@ -11,14 +11,14 @@ from SeleniumTestCase import SeleniumTestCase
 
 import unittest, xmlrunner
 
-class TestExplore(SeleniumTestCase):
+class TestMediaEntertainment(SeleniumTestCase):
    
     
     def test_explore(self):
         try:
             sel = self.selenium
             sel.set_speed("3000")
-            sel.open("/explore")
+            sel.open("/media-entertainment")
             sel.wait_for_page_to_load("60000")
             self.failUnless(sel.is_element_present("xpath=//div[@id='main-container']/section"))
             self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/div/h3"))
@@ -37,7 +37,7 @@ class TestExplore(SeleniumTestCase):
                 #print self.__class__.__name__ + " failed!"
                 #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
         
-globals().update(make_platform_classes.make_platform_classes(TestExplore))
+globals().update(make_platform_classes.make_platform_classes(TestMediaEntertainment))
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test-reports'))
