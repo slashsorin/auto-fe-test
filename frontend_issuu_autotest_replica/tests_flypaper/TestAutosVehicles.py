@@ -18,7 +18,7 @@ class TestAutosVehicles(SeleniumTestCase):
         try:
             sel = self.selenium
             sel.set_speed("3000")
-            sel.open("/autos_vehicles")
+            sel.open("/autos-vehicles")
             sel.wait_for_page_to_load("60000")
             self.failUnless(sel.is_element_present("xpath=//div[@id='main-container']/section"))
             self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/div/h3"))
