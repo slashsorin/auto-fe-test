@@ -17,7 +17,7 @@ class TestExplore(SeleniumTestCase):
     def test_explore(self):
         try:
             sel = self.selenium
-            sel.set_speed("3000")
+            sel.set_speed("6000")
             sel.open("/explore")
             sel.wait_for_page_to_load("60000")
             self.failUnless(sel.is_element_present("xpath=//div[@id='main-container']/section"))
