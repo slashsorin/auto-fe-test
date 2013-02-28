@@ -14,29 +14,29 @@ import unittest, xmlrunner
 class TestLogInLogOut(SeleniumTestCase):
     
     def test_log_in_log_out(self):
-		try:
-        	sel = self.selenium
-        	sel.open("/explore")
-        	sel.wait_for_page_to_load("60000")
-        	sel.click("id=login-link")
-        	sel.type("id=username", "sorintest")
-        	sel.type("id=password", "sorintest")
-        	sel.click("id=loginButton")
-        	sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
-        	sel.click("id=logout-link")
-        	sel.click("id=login-link")
-        	sel.type("id=username", "sorintest")
-        	sel.type("id=password", "sorintestt")
-        	sel.click("id=loginButton")
-        	try: self.failIf(sel.is_text_present("sorintest"))
-        	except AssertionError, e: self.verificationErrors.append(str(e))
-        	sel.type("id=password", "sorintest")
-        	sel.click("id=loginButton")
-        	sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
-        	sel.click("id=logout-link")
-    	
-			#print self.__class__.__name__ + " passed!"       
-			#sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
+        try:
+            sel = self.selenium
+            sel.open("/explore")
+            sel.wait_for_page_to_load("60000")
+            sel.click("id=login-link")
+            sel.type("id=username", "sorintest")
+            sel.type("id=password", "sorintest")
+            sel.click("id=loginButton")
+            sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
+            sel.click("id=logout-link")
+            sel.click("id=login-link")
+            sel.type("id=username", "sorintest")
+            sel.type("id=password", "sorintestt")
+            sel.click("id=loginButton")
+            try: self.failIf(sel.is_text_present("sorintest"))
+            except AssertionError, e: self.verificationErrors.append(str(e))
+            sel.type("id=password", "sorintest")
+            sel.click("id=loginButton")
+            sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
+            sel.click("id=logout-link")
+            
+            #print self.__class__.__name__ + " passed!"       
+            #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
             
         except AttributeError:
             pass
