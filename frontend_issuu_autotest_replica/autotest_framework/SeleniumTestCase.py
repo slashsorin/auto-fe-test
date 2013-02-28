@@ -47,14 +47,16 @@ class SeleniumTestCase(TestCase):
                 c['avoid-proxy'] = cfg.config['avoid-proxy']
             if hasattr(self,'avoid_proxy'):
                 c['avoid-proxy'] = self.avoid_proxy
-
-            session = selenium(cfg.config['host'],
-                               cfg.config['port'],
-                               json.dumps(c),
-                               "https://" + cfg.config['base-url'])
-            session.start()
-            session.set_timeout(cfg.config['session_timeout'])
-            self.selenium = session
+			
+			for baseURL in cfg.config['base-url']:
+            	session = selenium(cfg.config['host'],
+                               	cfg.config['port'],
+                               	json.dumps(c),
+                               	baseURL)
+								#"https://" + cfg.config['base-url'])
+            	session.start()
+            	session.set_timeout(cfg.config['session_timeout'])
+            	self.selenium = session
         except AttributeError:
             pass
         except Exception, e:
