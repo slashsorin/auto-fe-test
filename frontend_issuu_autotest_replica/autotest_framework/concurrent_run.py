@@ -24,7 +24,7 @@ def test_fun(path):
     print "Time taken: %s minutes" % ((time.time() - start) /60)
     os.chdir('..')
 
-for p in ['tests_flypaper']:
+for p in ['tests_flypaper_debug_mode']:
 	test_fun(p)
 
 '''
