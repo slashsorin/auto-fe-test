@@ -18,7 +18,7 @@ class TestExploreDebugMode(SeleniumTestCase):
             sel = self.selenium
             sel.open("/explore?debug")
             sel.wait_for_page_to_load("60000")
-            try: self.failUnless(sel.is_text_present("solr_category_static:Home &amp; Garden"))
+            try: self.failUnless(sel.is_text_present("solr_category_static:Home & Garden"))
             except AssertionError, e: self.verificationErrors.append(str(e))
             try: self.failUnless(sel.is_text_present("trending"))
             except AssertionError, e: self.verificationErrors.append(str(e))
