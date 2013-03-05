@@ -51,7 +51,7 @@ class SeleniumTestCase(TestCase):
             session = selenium(cfg.config['host'],
 								cfg.config['port'],
 								json.dumps(c),
-								"https://" + cfg.config['base-url'])
+								"http://" + cfg.config['base-url'])
 								
             session.start()
             session.set_timeout(cfg.config['session_timeout'])
