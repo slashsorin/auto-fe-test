@@ -11,7 +11,7 @@ from SeleniumTestCase import SeleniumTestCase
 
 import unittest, xmlrunner
 
-class TestNotifications(unittest.TestCase):
+class TestNotifications(SeleniumTestCase):
     
     def test_notifications(self):
         try:

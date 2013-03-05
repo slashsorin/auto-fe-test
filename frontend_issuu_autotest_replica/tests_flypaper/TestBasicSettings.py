@@ -11,7 +11,7 @@ from SeleniumTestCase import SeleniumTestCase
 
 import unittest, xmlrunner
 
-class TestBasicSettings(unittest.TestCase):
+class TestBasicSettings(SeleniumTestCase):
    
     def test_basic_settings(self):
         try:
