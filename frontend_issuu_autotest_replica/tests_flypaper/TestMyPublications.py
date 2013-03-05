@@ -26,6 +26,8 @@ class TestMyPublications(SeleniumTestCase):
             sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
             sel.click("link=My Publications")
             sel.wait_for_page_to_load("60000")
+            sel.click("xpath=//a[@id='acceptButton']//strong[.='I accept the Terms of Service']")
+            sel.wait_for_page_to_load("60000")
             try: self.failUnless(sel.is_element_present("id=main-container"))
             except AssertionError, e: self.verificationErrors.append(str(e))
             try: self.failUnless(sel.is_element_present("id=logo"))
