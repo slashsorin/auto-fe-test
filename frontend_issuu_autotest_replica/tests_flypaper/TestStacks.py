@@ -43,7 +43,7 @@ class TestStacks(SeleniumTestCase):
             sel.type("id=itemcreator", "Test stack :)")
             sel.click("xpath=//a[@class='access']//span[.='C']")
             sel.click("link=Public stack")
-            sel.click(u"link=C▼")
+            sel.click("link=C")
             sel.click("link=Secret stack")
             sel.click("xpath=//a[@class='access']//span[.='L']")
             sel.click("link=Public stack")
