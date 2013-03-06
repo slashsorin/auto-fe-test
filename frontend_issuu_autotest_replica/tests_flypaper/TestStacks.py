@@ -11,9 +11,9 @@ from SeleniumTestCase import SeleniumTestCase
 
 import unittest, xmlrunner
 
-class TestSearchPage(SeleniumTestCase):
+class TestStacks(SeleniumTestCase):
 
-    def test_search_page(self):
+    def test_stacks(self):
         try:
             sel = self.selenium
             sel.set_speed("2000")
@@ -59,7 +59,7 @@ class TestSearchPage(SeleniumTestCase):
                 #print self.__class__.__name__ + " failed!"
                 #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
         
-globals().update(make_platform_classes.make_platform_classes(TestSearchPage))
+globals().update(make_platform_classes.make_platform_classes(TestStacks))
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test-reports'))
