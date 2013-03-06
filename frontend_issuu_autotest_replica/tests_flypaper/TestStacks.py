@@ -11,9 +11,9 @@ from SeleniumTestCase import SeleniumTestCase
 
 import unittest, xmlrunner
 
-class TestStacks(SeleniumTestCase):
-    
-    def test_stacks(self):
+class TestSearchPage(SeleniumTestCase):
+
+    def test_search_page(self):
         try:
             sel = self.selenium
             sel.set_speed("2000")
@@ -48,7 +48,7 @@ class TestStacks(SeleniumTestCase):
             sel.click("xpath=//a[@class='access']//span[.='L']")
             sel.click("link=Public stack")
             sel.click("xpath=//nav[@class='left-nav']//button[.='Edit']")
-            
+
             #print self.__class__.__name__ + " passed!"       
             #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
             
@@ -58,8 +58,8 @@ class TestStacks(SeleniumTestCase):
             #if  sys.exc_info()[1]:
                 #print self.__class__.__name__ + " failed!"
                 #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=False)
-
-globals().update(make_platform_classes.make_platform_classes(TestStacks))
+        
+globals().update(make_platform_classes.make_platform_classes(TestSearchPage))
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='../test-reports'))
