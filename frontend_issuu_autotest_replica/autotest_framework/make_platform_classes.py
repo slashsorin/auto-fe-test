@@ -19,7 +19,7 @@ def make_platform_classes(base_class, platforms=None):
         browser = platfrm['browser']
         version = platfrm['browser-version']
         
-        name = "%s_%s_%s_" % (#base_class.__name__,
+        name = "%s_%s_%s_%s_" % (base_class.__name__,
                                 os,
                                 browser,
                                 version
