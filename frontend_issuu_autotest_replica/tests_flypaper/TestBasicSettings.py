@@ -21,7 +21,7 @@ class TestBasicSettings(SeleniumTestCase):
             sel.wait_for_page_to_load("60000")
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintest")
-            sel.click("id=loginButton")
+            sel.click("id=login-button")
             sel.wait_for_page_to_load("60000")
             #sel.click("xpath=//a[@id='acceptButton']//strong[.='I accept the Terms of Service']")
             #sel.wait_for_page_to_load("60000")

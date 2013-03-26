@@ -22,7 +22,7 @@ class TestMyPublications(SeleniumTestCase):
             sel.click("id=login-link")
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintest")
-            sel.click("id=loginButton")
+            sel.click("id=login-button")
             sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
             sel.click("link=My Publications")
             sel.wait_for_page_to_load("60000")
