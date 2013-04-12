@@ -22,7 +22,7 @@ class TestLogInLogOut(SeleniumTestCase):
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintest")
             sel.click("id=login-button")
-            sel.click("xpath=//nav[@class='userstatus']//a[.='sorintest ']")
+            sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest']")
             sel.click("id=logout-link")
             sel.click("id=login-link")
             sel.type("id=username", "sorintest")
@@ -32,7 +32,7 @@ class TestLogInLogOut(SeleniumTestCase):
             except AssertionError, e: self.verificationErrors.append(str(e))
             sel.type("id=password", "sorintest")
             sel.click("id=login-button")
-            sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest ']")
+            sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest']")
             sel.click("id=logout-link")
             
             #print self.__class__.__name__ + " passed!"       
