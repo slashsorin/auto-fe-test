@@ -33,6 +33,7 @@ class TestBasicSettings(SeleniumTestCase):
             except AssertionError, e: self.verificationErrors.append(str(e))
             try: self.failUnless(sel.is_element_present("id=passwordpreview"))
             except AssertionError, e: self.verificationErrors.append(str(e))
+			sel.click("id=passwordpreview")
             try: self.failUnless(sel.is_element_present("id=newPasswordForm"))
             except AssertionError, e: self.verificationErrors.append(str(e))
             try: self.failUnless(sel.is_element_present("id=firstname"))
