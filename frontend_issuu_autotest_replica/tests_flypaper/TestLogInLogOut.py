@@ -16,14 +16,18 @@ class TestLogInLogOut(SeleniumTestCase):
     def test_log_in_log_out(self):
         try:
             sel = self.selenium
+			sel.set_speed("3000")
             sel.open("/explore")
             sel.wait_for_page_to_load("60000")
             sel.click("id=login-link")
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintest")
             sel.click("id=login-button")
-            sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest']")
-            sel.click("id=logout-link")
+			sel.wait_for_page_to_load("60000")
+            #sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest']")
+			sel.mouse_over("xpath=//nav[@class='userstatus']//span[.='sorintest']")
+	        sel.click("id=logout-link")
+	        sel.wait_for_page_to_load("60000")
             sel.click("id=login-link")
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintestt")
