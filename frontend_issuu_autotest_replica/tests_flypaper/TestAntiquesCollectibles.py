@@ -11,6 +11,10 @@ from SeleniumTestCase import SeleniumTestCase
 
 import unittest, xmlrunner
 
+import hmac
+from hashlib import md5
+import cfg
+
 class TestAntiquesCollectibles(SeleniumTestCase):
    
     
@@ -26,9 +30,16 @@ class TestAntiquesCollectibles(SeleniumTestCase):
             self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/div/p[2]"))
             self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/div"))
             self.failUnless(sel.is_element_present("xpath=//html/body/div/section/div/a/img"))
-			
-			#print self.__class__.__name__ + " passed!"       
-			#sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
+            
+            user = cfg.config['username']
+            key = cfg.config['access-key']
+            
+            linkID = self.selenium.get_eval("selenium.sessionId")
+            token = hmac.new(user + ":" + key, linkID, md5).hexdigest()
+            
+            print "https://saucelabs.com/jobs/" + linkID + "?auth=" + token
+            #print self.__class__.__name__ + " passed!"       
+            #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
             
         except AttributeError:
             pass
