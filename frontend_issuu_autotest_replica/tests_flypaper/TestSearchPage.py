@@ -16,7 +16,7 @@ class TestSearchPage(SeleniumTestCase):
     def test_search_page(self):
         try:
             sel = self.selenium
-			sel.set_speed("3000")
+            sel.set_speed("3000")
             sel.open("/explore")
             sel.wait_for_page_to_load("60000")
             sel.click("id=input_keywords")
