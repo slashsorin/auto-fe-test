@@ -25,7 +25,7 @@ class TestLogInLogOut(SeleniumTestCase):
             sel.click("id=login-button")
             sel.wait_for_page_to_load("60000")
             #sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest']")
-            sel.mouse_over("xpath=//nav[@class='userstatus']//span[.='sorintest']")
+            sel.mouse_over("xpath=//div[@class='has-submenu']/a/img")
             sel.click("id=logout-link")
             sel.wait_for_page_to_load("60000")
             sel.click("id=login-link")
