@@ -36,8 +36,6 @@ class TestLogInLogOut(SeleniumTestCase):
             except AssertionError, e: self.verificationErrors.append(str(e))
             sel.type("id=password", "sorintest")
             sel.click("id=login-button")
-            sel.click("xpath=//nav[@class='userstatus']//span[.='sorintest']")
-            sel.click("id=logout-link")
             
             #print self.__class__.__name__ + " passed!"       
             #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
