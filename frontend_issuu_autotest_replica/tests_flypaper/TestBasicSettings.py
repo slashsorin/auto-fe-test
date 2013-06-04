@@ -59,7 +59,7 @@ class TestBasicSettings(SeleniumTestCase):
             sel.click("xpath=//label[@for='safesearch-on']//span[.='On']")
             sel.check("id=safesearch-on")
             sel.type("id=about", "personal description")
-            sel.click("xpath=//div[@id='user-info']/p/input")
+            #sel.click("xpath=//div[@id='user-info']/p/input")
             
             #print self.__class__.__name__ + " passed!"       
             #sts.set_test_status(self.selenium.get_eval("selenium.sessionId"), passed=True)
