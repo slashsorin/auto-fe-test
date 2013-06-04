@@ -17,7 +17,7 @@ class TestNotifications(SeleniumTestCase):
         try:
             sel = self.selenium
             sel.set_speed("1000")
-            sel.open("https://flypaper.issuu.com/signin?onLogin=http%3A%2F%2Fflypaper.issuu.com%2Fhome%2Fsettings%2Fnotifications")
+            sel.open("https://issuu.com/signin?onLogin=http%3A%2F%2Fissuu.com%2Fhome%2Fsettings%2Fnotifications")
             sel.wait_for_page_to_load("60000")
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintest")

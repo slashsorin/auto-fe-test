@@ -17,7 +17,7 @@ class TestBilling(SeleniumTestCase):
         try:
             sel = self.selenium
             sel.set_speed("2000")
-            sel.open("/signin?onLogin=https%3A%2F%2Fflypaper.issuu.com%2Fhome%2Fsettings%2Fbilling")
+            sel.open("/signin?onLogin=https%3A%2F%2Fissuu.com%2Fhome%2Fsettings%2Fbilling")
             sel.wait_for_page_to_load("60000")
             sel.type("id=username", "sorintest")
             sel.type("id=password", "sorintest")
