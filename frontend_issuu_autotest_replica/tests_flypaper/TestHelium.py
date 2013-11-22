@@ -13,7 +13,7 @@ import unittest, xmlrunner
 
 from helium.api import *
 
-class TestHelium(SeleniumTestCase):
+class TestHelium():
    
     def test_helium(self):
         try:
